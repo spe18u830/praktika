@@ -45,11 +45,11 @@ CREATE TABLE IF NOT EXISTS `mydb`.`users` (
   `idusers` INT NOT NULL AUTO_INCREMENT,
   `add_to_queue` TINYINT(1) NULL,
   `launch_for_execution` TINYINT NULL,
-  `stop` TINYINT NULL,
+  `stopped` TINYINT NULL,
   `resume_execution` TINYINT NULL,
   `change_priority` TINYINT NULL,
   `fix_completion` TINYINT NULL,
-  `delete` TINYINT NULL,
+  `deleted` TINYINT NULL,
   `user_login` VARCHAR(45) NULL,
   `user_name` VARCHAR(45) NULL,
   `user_password` VARCHAR(45) NULL,
@@ -89,6 +89,56 @@ CREATE TABLE IF NOT EXISTS `mydb`.`tasks` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO users (add_to_queue, launch_for_execution, stopped, resume_execution, change_priority, fix_completion, deleted, user_login, user_name, user_password )
+
+VALUES(0, 0, 0, 0, 0, 0, 0, 'login1', 'name1', 'password1' );
+
+INSERT INTO users (add_to_queue, launch_for_execution, stopped, resume_execution, change_priority, fix_completion, deleted, user_login, user_name, user_password )
+
+VALUES(0, 0, 0, 0, 0, 0, 0, 'login2', 'name2', 'password2' );
+
+INSERT INTO users (add_to_queue, launch_for_execution, stopped, resume_execution, change_priority, fix_completion, deleted, user_login, user_name, user_password )
+
+VALUES(0, 0, 0, 0, 0, 0, 0, 'login3', 'name3', 'password3' );
+
+INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers, idtask)
+
+VALUES('task1', '1111', 1, 1, 1, 1 );
+
+INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers, idtask)
+
+VALUES('task2', '2222', 2, 2, 2, 2 );
+
+INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers, idtask)
+
+VALUES('task3', '3333', 3, 3, 3, 3 );
+
+INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers, idtask)
+
+VALUES('task4', '4444', 4, 4, 4, 4 );
+
+INSERT INTO taskstate (idtaskstate, taskstatename)
+
+VALUES(1, taskstate1);
+
+INSERT INTO taskstate (idtaskstate, taskstatename)
+
+VALUES(2, taskstate2);
+
+INSERT INTO taskstate (idtaskstate, taskstatename)
+
+VALUES(3, taskstate3);
+
+INSERT INTO nodes (idnode, nodename, idtask)
+
+VALUES(1, 'node1', 1);
+
+INSERT INTO nodes (idnode, nodename, idtask)
+
+VALUES(2, 'node2', 2);
+
+
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
