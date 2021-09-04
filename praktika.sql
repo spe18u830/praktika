@@ -102,21 +102,20 @@ INSERT INTO users (add_to_queue, launch_for_execution, stopped, resume_execution
 
 VALUES(0, 0, 0, 0, 0, 0, 0, 'login3', 'name3', 'password3' );
 
-INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers, idtask)
+INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers)
 
-VALUES('task1', '1111', 1, 1, 1, 1 );
+VALUES('task1', '1111', 1, 1, 1 );
 
-INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers, idtask)
+INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers)
 
-VALUES('task2', '2222', 2, 2, 2, 2 );
+VALUES('task2', '2222', 2, 2, 2 );
 
-INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers, idtask)
+INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers)
+VALUES('task3', '3333', 3, 3, 3 );
 
-VALUES('task3', '3333', 3, 3, 3, 3 );
+INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers)
 
-INSERT INTO tasks (task_name, arguments, number_of_cores, priority, idusers, idtask)
-
-VALUES('task4', '4444', 4, 4, 4, 4 );
+VALUES('task4', '4444', 4, 4, 4 );
 
 INSERT INTO taskstate (idtaskstate, taskstatename)
 
