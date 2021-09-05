@@ -119,15 +119,23 @@ VALUES('task4', '4444', 4, 4, 4 );
 
 INSERT INTO taskstate (idtaskstate, taskstatename)
 
-VALUES(1, taskstate1);
+VALUES(1, 'queued');
 
 INSERT INTO taskstate (idtaskstate, taskstatename)
 
-VALUES(2, taskstate2);
+VALUES(2, 'in_progress');
 
 INSERT INTO taskstate (idtaskstate, taskstatename)
 
-VALUES(3, taskstate3);
+VALUES(3, 'paused');
+
+INSERT INTO taskstate (idtaskstate, taskstatename)
+
+VALUES(3, 'completed');
+
+INSERT INTO taskstate (idtaskstate, taskstatename)
+
+VALUES(3, 'deleted');
 
 INSERT INTO nodes (idnode, nodename, idtask)
 
